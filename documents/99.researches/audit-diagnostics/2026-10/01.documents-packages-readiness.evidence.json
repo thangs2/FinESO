@@ -1,0 +1,70 @@
+{
+  "claim_id": "RES-AUD-DIAG-202610-001",
+  "statement": "FinESO đang ở skeleton Giai đoạn 0: tài liệu SDLC đầy đủ nhưng toàn bộ packages nội bộ chưa có package.json và mã nguồn; cấu hình gốc tham chiếu fineso-server và schema foundation không tồn tại.",
+  "metrics": {
+    "documents_file_count": 2,
+    "packages_with_source_files": 0,
+    "packages_expected_in_tree": 5,
+    "packages_missing_from_tree": 1,
+    "smoke_tests_pass": 1,
+    "smoke_tests_total": 1
+  },
+  "evidence_items": [
+    {
+      "evidence_id": "EVD-DOC-01",
+      "type": "FILE_INVENTORY",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/documents/",
+      "metric_evaluated": "documents_file_count (trước khi thêm 99.researches)",
+      "raw_snapshot": "01.architecture-blueprint.md (redirect); 03.9-cach-dung-jev-trong-agent.md",
+      "audit_status": "VERIFIED_DETERMINISTIC"
+    },
+    {
+      "evidence_id": "EVD-PKG-01",
+      "type": "FILE_INVENTORY",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/packages/",
+      "metric_evaluated": "packages_with_source_files",
+      "raw_snapshot": "5 empty dirs: fineso-foundation, fineso-adapters, fineso-core, fineso-decision, fineso-cockpit; no package.json",
+      "audit_status": "VERIFIED_DETERMINISTIC"
+    },
+    {
+      "evidence_id": "EVD-CFG-01",
+      "type": "CONFIG_REFERENCE",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/package.json",
+      "metric_evaluated": "broken dev script",
+      "raw_snapshot": "scripts.dev -> packages/fineso-server/src/index.mjs (path absent)",
+      "audit_status": "DRIFT_DETECTED"
+    },
+    {
+      "evidence_id": "EVD-CFG-02",
+      "type": "CONFIG_REFERENCE",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/fineso.config.json",
+      "metric_evaluated": "missing schema",
+      "raw_snapshot": "$schema -> ./packages/fineso-foundation/schema/config.schema.json (absent)",
+      "audit_status": "DRIFT_DETECTED"
+    },
+    {
+      "evidence_id": "EVD-SOT-01",
+      "type": "ARCHITECTURE_MATRIX",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/SDLC/04.architecture/01.landscape/05.packages-matrix-and-invariants.md",
+      "metric_evaluated": "expected package roles",
+      "audit_status": "SPEC_ONLY"
+    },
+    {
+      "evidence_id": "EVD-TEST-01",
+      "type": "SMOKE_TEST",
+      "source_uri": "file:///Users/thangs2net/Workspaces/FinESO/SDLC/10.test/04.qc/fineso-smoke.test.mjs",
+      "metric_evaluated": "smoke_tests_pass",
+      "raw_snapshot": "bun test: 1 pass (Evidence Pack fixture, not @fineso/* packages)",
+      "audit_status": "VERIFIED_DETERMINISTIC"
+    }
+  ],
+  "sufficiency_scoring": {
+    "source_authenticity": 38,
+    "deterministic_reconciliation": 30,
+    "period_coverage": 18,
+    "data_freshness": 10,
+    "total_score": 96,
+    "pass_gate": true,
+    "note": "Rubric cho độ đủ bằng chứng kiến trúc (inventory + config), không phải báo cáo tài chính FM."
+  }
+}

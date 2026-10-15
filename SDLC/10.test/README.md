@@ -16,6 +16,9 @@ SDLC/10.test/
     └── fineso-smoke.test.mjs      # Smoke Test đối soát số học tất định & Rubric Gate
 ```
 
+**Research (audit diagnostic, không thay SoT test):** [Báo cáo 01 — Documents × Packages Readiness](../../documents/99.researches/audit-diagnostics/2026-10/01.documents-packages-readiness.md) (`RES-AUD-DIAG-202610-001`) · [Báo cáo 02 — Antigravity Harness Debate & Readiness](../../documents/99.researches/audit-diagnostics/2026-10/02.antigravity-harness-debate-and-readiness.md) (`RES-AUD-DIAG-202610-002`).
+
+
 ---
 
 ## 🎯 Vai Trò Của `fineso-smoke.test.mjs`

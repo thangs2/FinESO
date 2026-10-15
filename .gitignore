@@ -39,3 +39,6 @@ tmp/
 *.log
 .agents/session/
 .cursor/session/
+__pycache__/
+*.py[cod]
+
