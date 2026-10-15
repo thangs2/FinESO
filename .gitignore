@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+bun.lockb
+package-lock.json
+
+# Local Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Knowledge Graphs & Indexes (Generated local state)
+.codegraph/
+.docgraph/
+.harness/
+
+# Data Lake raw & local files (avoid committing sensitive financial data)
+data-lake/bank/*
+!data-lake/bank/.gitkeep
+data-lake/invoices/*
+!data-lake/invoices/.gitkeep
+data-lake/cashflow/*
+!data-lake/cashflow/.gitkeep
+data-lake/google-sync/*
+!data-lake/google-sync/.gitkeep
+
+# AgentMemory local state
+data.agentmemory/
+.agentmemory/
+
+# Temporary / Scratch
+scratch/
+tmp/
+*.log

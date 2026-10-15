@@ -1,0 +1,27 @@
+{
+  "$schema": "./packages/fineso-foundation/schema/config.schema.json",
+  "name": "FinESO Enterprise Workspace",
+  "version": "1.0.0",
+  "currency": "VND",
+  "dataLake": {
+    "root": "./data-lake",
+    "sources": {
+      "bank": "./data-lake/bank",
+      "invoices": "./data-lake/invoices",
+      "cashflow": "./data-lake/cashflow",
+      "googleSync": "./data-lake/google-sync"
+    }
+  },
+  "computation": {
+    "engine": "duckdb",
+    "memoryLimit": "2GB",
+    "threads": 4
+  },
+  "agentMemory": {
+    "host": "http://localhost:3311",
+    "viewer": "http://localhost:3313"
+  },
+  "governance": {
+    "policyPath": "./.harness/decision-policy.json"
+  }
+}

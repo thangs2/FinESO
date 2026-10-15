@@ -1,0 +1,69 @@
+{
+    "version": 1,
+    "hooks": {
+        "preToolUse": [
+            {
+                "command": ".cursor/hooks/guard-write.py",
+                "matcher": "Write|StrReplace|Delete",
+                "failClosed": true
+            },
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook guard-brain --tree cursor'",
+                "matcher": "CallDynamicTool|ask_deepseek",
+                "failClosed": false
+            }
+        ],
+        "beforeShellExecution": [
+            {
+                "command": ".cursor/hooks/guard-shell.py",
+                "failClosed": true
+            },
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook guard-shell --tree cursor'",
+                "failClosed": true
+            }
+        ],
+        "beforeSubmitPrompt": [
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook preflight --tree cursor'",
+                "failClosed": false
+            },
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook route --tree cursor'",
+                "failClosed": false
+            }
+        ],
+        "afterFileEdit": [
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook route --tree cursor'",
+                "failClosed": false
+            }
+        ],
+        "preCompact": [
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook pre-compact --tree cursor'",
+                "failClosed": false
+            }
+        ],
+        "postToolUse": [
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook gap-tracker --tree cursor'",
+                "failClosed": false
+            },
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook post-tool-hint --tree cursor'",
+                "failClosed": false
+            },
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook route --tree cursor'",
+                "failClosed": false
+            }
+        ],
+        "stop": [
+            {
+                "command": "bash -lc 'export HARNESS_TREE=cursor; exec node .harness/host-pack/harness-hook.mjs --hook route --tree cursor'",
+                "failClosed": false
+            }
+        ]
+    }
+}

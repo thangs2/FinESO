@@ -1,0 +1,62 @@
+{
+  "mcpServers": {
+    "agentmemory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@agentmemory/mcp"
+      ],
+      "env": {
+        "AGENTMEMORY_URL": "http://localhost:3311",
+        "AGENTMEMORY_VIEWER_URL": "http://localhost:3313"
+      }
+    },
+    "codegraph": {
+      "type": "stdio",
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp",
+        "--path",
+        "/Users/thangs2net/Workspaces/FinESO"
+      ],
+      "env": {
+        "CODEGRAPH_ALLOW_UNSAFE_NODE": "1"
+      }
+    },
+    "docgraph": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": [
+        "run",
+        "/Users/thangs2net/Workspaces/FinESO/.cursor/mcp/docgraph-mcp.mjs"
+      ],
+      "env": {
+        "DOCGRAPH_REPO": "/Users/thangs2net/Workspaces/FinESO",
+        "DOCGRAPH_HARNESS": "ag"
+      }
+    },
+    "deepseek-direct": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": [
+        "run",
+        "/Users/thangs2net/.gemini/antigravity/deepseek_direct.js"
+      ],
+      "env": {
+        "DEEPSEEK_ENV_FILE": "/Users/thangs2net/.gemini/antigravity/deepseek.env"
+      }
+    },
+    "chrome-devtools": {
+      "command": "/Users/thangs2net/.bun/bin/chrome-devtools-mcp",
+      "args": [
+        "--executablePath",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--headless",
+        "--viewport",
+        "1920x1080"
+      ],
+      "env": {
+        "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "agentmemory-mcp": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@agentmemory/mcp"
+      ],
+      "env": {
+        "AGENTMEMORY_URL": "http://localhost:3311",
+        "AGENTMEMORY_VIEWER_URL": "http://localhost:3313"
+      }
+    },
+    "codegraph": {
+      "type": "stdio",
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp",
+        "--path",
+        "."
+      ],
+      "env": {
+        "CODEGRAPH_ALLOW_UNSAFE_NODE": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "agentmemory-mcp": {
+      "command": "npx",
+      "args": ["-y", "@agentmemory/mcp"],
+      "env": {
+        "AGENTMEMORY_URL": "http://localhost:3311",
+        "AGENTMEMORY_VIEWER_URL": "http://localhost:3313"
+      }
+    },
+    "codegraph": {
+      "type": "stdio",
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp",
+        "--path",
+        "/Users/thangs2net/Workspaces/FinESO"
+      ],
+      "env": {
+        "CODEGRAPH_ALLOW_UNSAFE_NODE": "1"
+      }
+    },
+    "docgraph": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": ["run", "/Users/thangs2net/Workspaces/FinESO/.cursor/mcp/docgraph-mcp.mjs"],
+      "env": {
+        "DOCGRAPH_REPO": "/Users/thangs2net/Workspaces/FinESO",
+        "DOCGRAPH_HARNESS": "cursor"
+      }
+    },
+    "deepseek-direct": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": [
+        "run",
+        "/Users/thangs2net/.gemini/antigravity/deepseek_direct.js"
+      ],
+      "env": {
+        "DEEPSEEK_ENV_FILE": "/Users/thangs2net/.gemini/antigravity/deepseek.env"
+      }
+    }
+  }
+}

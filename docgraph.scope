@@ -1,0 +1,35 @@
+# docgraph.scope — SINGLE SOURCE OF TRUTH for what docgraph covers in FinESO.
+
+# --- Extensions -------------------------------------------------------------
+ext:.md
+ext:.mdc
+ext:.json
+
+# --- Documentation pack & architecture --------------------------------------
+path:documents
+path:SDLC
+path:installation/agentmemory/README.md
+
+# --- Agent law & skills -----------------------------------------------------
+path:AGENTS.md
+path:README.md
+path:.cursor/rules
+path:.cursor/instructions.md
+path:.agents/rules
+path:.agents/skills
+path:.agents/instructions.md
+
+# --- Policy & package -------------------------------------------------------
+path:package.json
+
+# --- Exclusions -------------------------------------------------------------
+exclude:**/tsconfig*.json
+exclude:**/package-lock.json
+exclude:**/bun.lock
+exclude:**/bun.lockb
+exclude:node_modules/**
+exclude:.harness/**
+exclude:.docgraph/**
+exclude:.codegraph/**
+exclude:data-lake/**
+exclude:scratch/**
