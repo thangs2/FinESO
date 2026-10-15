@@ -12,6 +12,10 @@ Repo này phát triển nền tảng **FinESO** — Đội ngũ AI Agent Tài ch
 2. **Bất biến 2 (Deterministic Calculator vs Probabilistic LLM):** Mọi phép tính cộng, trừ, nhân, chia, tổng hợp số dư, tuổi nợ phải được thực hiện bằng **DuckDB / SQL / Python Function tất định**. Tuyệt đối cấm LLM tự tính nhẩm trong context.
 3. **Bất biến 3 (Không nạp Raw Excel vào Context):** Tuyệt đối không dùng `view_file` để mở toàn bộ file Excel/CSV hàng ngàn dòng vào context. Bắt buộc truy vấn qua DuckDB tool hoặc lấy slice nhỏ phục vụ evidence.
 4. **Bất biến 4 (Rubric Gate $\ge 85$):** Báo cáo chỉ được phát hành khi tổng điểm Evidence-Sufficiency Score đạt từ $85/100$ trở lên. Nếu thiếu dữ liệu, phải nói rõ và yêu cầu bổ sung.
+5. **Bất biến 5 (Dual-Harness Isolation — Cursor vs Antigravity):**
+   - Thư mục `.cursor/` là môi trường độc lập, cô lập hoàn toàn dành riêng cho **Cursor IDE**.
+   - Thư mục `.agents/` là môi trường độc lập, cô lập hoàn toàn dành riêng cho **Google Antigravity IDE**.
+   - **Tuyệt đối CẤM:** Không xóa file, không gộp, không chuyển đổi định dạng chéo, và không đưa ra bất kỳ đề xuất nào về việc "chuẩn hóa hoặc xóa trùng lặp" giữa `.cursor/` và `.agents/`. Sự tồn tại song song của các file rules/configs ở cả 2 cây thư mục là thiết kế kiến trúc chủ đích bắt buộc để đảm bảo tính độc lập và khả năng vận hành tự chủ của từng IDE.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 description: DAG Fan-Out coordination discipline and ban on unconstrained group chat
 globs: packages/fineso-core/**/*.{js,mjs,ts},packages/fineso-decision/**/*.{js,mjs,ts}
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Orchestration Discipline: DAG & Michelin Kitchen Architecture

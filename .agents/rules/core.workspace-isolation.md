@@ -19,3 +19,8 @@ canonical: AGENTS.md
    - Applying rules or assumptions from sibling repositories (`x79` or `harness-eso`) to FinESO modifications.
    - Pointing codegraph or docgraph tools to sibling workspace directories.
    - Creating unstructured scratch files outside of designated directories (`scratch/` or `.agents/`).
+   - Proposing to merge, delete, or cross-normalize rules/configs between `.cursor/` and `.agents/`.
+3. **Dual-Harness Isolation (Cursor vs Antigravity)**:
+   - `.cursor/`: Dedicated, isolated harness tree for Cursor IDE.
+   - `.agents/`: Dedicated, isolated harness tree for Google Antigravity IDE.
+   - Both trees run concurrently and independently. Parallel rules in both trees are mandatory by design.

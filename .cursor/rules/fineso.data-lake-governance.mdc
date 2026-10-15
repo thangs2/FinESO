@@ -1,7 +1,7 @@
 ---
 description: Raw data governance standards in data-lake (Excel, CSV, Google Sheets)
 globs: data-lake/**/*,packages/fineso-adapters/**/*.{js,mjs,ts}
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Raw Data Lake Governance

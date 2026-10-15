@@ -1,7 +1,7 @@
 ---
 description: FinESO Mermaid Diagram Standard (Adapted from x79 Golden Reference)
 globs: SDLC/**,documents/**,task/**,packages/**
-alwaysApply: true
+alwaysApply: false
 version: "1.0.0"
 ---
 
