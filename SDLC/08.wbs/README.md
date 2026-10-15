@@ -6,7 +6,7 @@ Thư mục này lưu trữ cấu trúc phân rã công việc chính thức củ
 
 ## 📑 Danh Mục Tài Liệu WBS
 
-- 📖 [**01.wbs-master-plan.md**](01.wbs-master-plan.md): Toàn bộ kế hoạch WBS chi tiết cho 6 giai đoạn phát triển, áp dụng khối tiêu chuẩn Purpose & Clarity (P-01 đến P-07) và quy luật kiểm thử TDD Quartet.
+- 📖 [**01.wbs-master-plan.md**](01.wbs-master-plan.md): Toàn bộ kế hoạch WBS chi tiết cho 6 giai đoạn phát triển; **Bảng Đăng Ký WBS** (WBS-ID · Gói CV · Deliverable · Acceptance · Deps · SP · Artifact/Status hai mặt phẳng); khối Purpose & Clarity (P-01 đến P-08) và TDD Quartet trong phần narrative từng hạng mục.
 
 ---
 
