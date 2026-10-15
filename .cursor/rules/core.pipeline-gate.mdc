@@ -11,3 +11,4 @@ version: "1.0.0"
 - **Brain Tier:** DeepSeek / reasoning tier handles complex architecture, design, and non-trivial debugging.
 - **Executor Tier:** Local tool operations perform discrete, validated edits and test commands.
 - **Zero Hallucination Gate:** Never guess paths, imports, or API signatures. Verify with codegraph/docgraph before writing.
+- **Mermaid Verification:** When the document pipeline processes a markdown file containing a mermaid block, invoke `fineso.doc.mermaid.verify.md` to validate diagram compliance.

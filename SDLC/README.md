@@ -14,7 +14,10 @@ SDLC/
 ├── 01.inception/                  # Tầm nhìn, chân dung người dùng và ranh giới hệ thống
 ├── 02.requirements/               # Yêu cầu nghiệp vụ tài chính (FRD, NFR)
 ├── 03.analysis/                   # Phân tích ca sử dụng (Use Cases, User Stories)
-├── 04.architecture/               # Bản vẽ kiến trúc nền tảng (01.architecture-blueprint.md)
+├── 04.architecture/               # Thiết kế kiến trúc nền tảng & mô hình tư duy kép
+│   ├── 01.architecture-blueprint.md # Bản vẽ kiến trúc toàn diện (Source of Truth)
+│   ├── 02.typesafe-jev-decision-facade.md # Thiết kế tích hợp sâu mô hình TypeSafe Jev (System 1)
+│   └── 03.9-cach-dung-jev-trong-agent.md # 9 điểm can thiệp của Jev trong vòng lặp AI Agent
 ├── 08.wbs/                        # Phân rã cấu trúc công việc (Work Breakdown Structure)
 │   ├── README.md                  # Hướng dẫn và ma trận phân công WBS
 │   └── 01.wbs-master-plan.md      # Toàn bộ WBS chi tiết chuẩn SDLC (Phase 0 đến Phase 5)
